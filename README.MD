@@ -1,4 +1,4 @@
-## Python script to download all Springer books released for free during the 2020 COVID-19 quarantine
+## Python script to download all german Springer books released for free during the 2020 COVID-19 quarantine
 
 ### Usage
 
