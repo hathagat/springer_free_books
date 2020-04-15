@@ -12,7 +12,7 @@ if not os.path.exists(folder):
     os.mkdir(folder)
     
 if not os.path.exists("table.xlsx"):
-    books = pd.read_excel('https://resource-cms.springernature.com/springer-cms/rest/v1/content/17858272/data/v4')
+    books = pd.read_excel('https://resource-cms.springernature.com/springer-cms/rest/v1/content/17863240/data/v2')
 
     # save table:
     books.to_excel(folder + 'table.xlsx')
@@ -24,7 +24,7 @@ else:
 
 print('Download started.')
 
-for url, title, author, pk_name in tqdm(books[['OpenURL', 'Book Title', 'Author', 'English Package Name']].values):
+for url, title, author, pk_name in tqdm(books[['OpenURL', 'Book Title', 'Author', 'German Package Name']].values):
 
     new_folder = folder + pk_name + '/'
 
