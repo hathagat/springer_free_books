@@ -1,18 +1,10 @@
-## Python script to download all german Springer books released for free during the 2020 COVID-19 quarantine
+## Another fork by Leo Barreiro from Springer Downloader, forked by hathagat
 
 ### Usage
 
 Just run the script in the desired folder. It will automatically create a /download/ subfolder and will categorize the books acording the subject.
-
-If you want to mannually set a folder to download, insert `folder = 'C:/desired_folder/'` in line 11 in main.py.
-
-The books are now organized in sub folders according to the subject ("English Package Name" column).
-
-Now updated to also download epub files if it's available.
-
-If you want just one or two specific books, get the excel file from the folowing link and download just those: https://resource-cms.springernature.com/springer-cms/rest/v1/content/17858272/data/v4
-
-It took about 4 hours to complete the 409 english books (14 GB, both PDF and epub) on my machine.
+The books are organized in sub folders according to the categorize ("English Package Name" column).
+Also download epub files if it's available.
 
 ### Usage in a virtual environment:
 
@@ -40,22 +32,3 @@ python main.py
 * https://resource-cms.springernature.com/springer-cms/rest/v1/content/17858272/data/v4
 
 Thanks Springer!
-
-## Docker container to do all the work
-
-Considering you cloned the repo in a folder, as:
-```bash
-cd \home\[user]\workspace`
-git clone https://github.com/alexgv99/springer_free_books.git
-cd springer_free_books
-mkdir downloads
-```
-You can run the scripts like that:
-
-```bash
-docker build . -t springer-image
-docker run --rm -v [local_download_folder]:/app/downloads springer-image
-```
-
-and the downloads will be at [local_download_folder]
-
