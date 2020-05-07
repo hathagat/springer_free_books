@@ -3,7 +3,9 @@
 ### Usage
 
 Just run the script in the desired folder. It will automatically create a /download/ subfolder and will categorize the books acording the subject.
+
 The books are organized in sub folders according to the categorize ("English Package Name" column).
+
 Also download epub files if it's available.
 
 ### Usage in a virtual environment:
